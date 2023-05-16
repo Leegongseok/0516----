@@ -1,0 +1,378 @@
+root@student7-virtual-machine:~/바탕화면# cd
+root@student7-virtual-machine:~# cd 다운로드
+root@student7-virtual-machine:~/다운로드# ls
+root@student7-virtual-machine:~/다운로드# wget
+wget: URL 빠짐
+사용법: wget [<옵션>]... [URL]...
+
+자세한 옵션은 `wget --help'를 입력하십시오.
+root@student7-virtual-machine:~/다운로드# wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+--2023-05-16 10:24:59--  https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+dl.google.com (dl.google.com) 해석 중... 172.217.24.78, 2404:6800:4005:81a::200e
+다음으로 연결 중: dl.google.com (dl.google.com)|172.217.24.78|:443... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 94953468 (91M) [application/x-debian-package]
+저장 위치: ‘google-chrome-stable_current_amd64.deb’
+
+google-chrome-stable 100%[=====================>]  90.55M  5.84MB/s    / 13s      
+
+2023-05-16 10:25:13 (6.89 MB/s) - ‘google-chrome-stable_current_amd64.deb’ 저장함 [94953468/94953468]
+
+root@student7-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb
+root@student7-virtual-machine:~/다운로드# dpkg -i google-chrome-stable_current_amd64.deb 
+Selecting previously unselected package google-chrome-stable.
+(데이터베이스 읽는중 ...현재 202172개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack google-chrome-stable_current_amd64.deb ...
+Unpacking google-chrome-stable (113.0.5672.92-1) ...
+google-chrome-stable (113.0.5672.92-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/x-www-browser (x-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/gnome-www-browser (gnome-www-browser) in auto mode
+update-alternatives: using /usr/bin/google-chrome-stable to provide /usr/bin/google-chrome (google-chrome) in auto mode
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+Processing triggers for man-db (2.10.2-1) ...
+root@student7-virtual-machine:~/다운로드# apt install google-chrome-stable_current_amd64.deb 
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+E: google-chrome-stable_current_amd64.deb 패키지를 찾을 수 없습니다
+root@student7-virtual-machine:~/다운로드# apt install ./google-chrome-stable_current_amd64.deb 
+패키지 목록을 읽는 중입니다... 완료
+의존성 트리를 만드는 중입니다... 완료
+상태 정보를 읽는 중입니다... 완료        
+주의, './google-chrome-stable_current_amd64.deb' 대신에 'google-chrome-stable' 패키지를 선택합니다
+패키지 google-chrome-stable는 이미 최신 버전입니다 (113.0.5672.92-1).
+0개 업그레이드, 0개 새로 설치, 0개 제거 및 0개 업그레이드 안 함.
+root@student7-virtual-machine:~/다운로드# google-chrome
+[3330:3330:0516/104042.700480:ERROR:zygote_host_impl_linux.cc(100)] Running as root without --no-sandbox is not supported. See https://crbug.com/638180.
+root@student7-virtual-machine:~/다운로드# nano /usr/bin/google-chrome-stable
+root@student7-virtual-machine:~/다운로드# google-chrome
+[3371:3371:0516/104552.381203:ERROR:network_service_instance_impl.cc(541)] Network service crashed, restarting service.
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.128: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.134: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.228: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.285: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.296: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.364: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.625: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.630: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:14.724: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.549: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.552: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.668: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.836: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.839: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:15.951: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.333: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.336: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.453: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.596: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.599: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.700: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.836: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.840: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:17.941: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:18.205: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:18.207: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:18.302: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:18.444: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:18.479: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:19.420: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:23.086: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:32.079: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.757: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.760: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.845: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.851: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.877: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.972: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:45.996: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.001: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.087: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.236: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.239: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.349: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.349: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.353: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.468: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.533: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.536: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.661: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.692: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.695: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:46.789: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:47.725: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:47.822: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:48.036: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:48.136: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:46:48.160: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:47:01.808: google-chrome has no capability of surrounding-text feature
+
+(google-chrome:3371): IBUS-WARNING **: 10:47:12.300: google-chrome has no capability of surrounding-text feature
+^Croot@student7-virtual-machine:~/다운로드# ^C
+root@student7-virtual-machine:~/다운로드# jobs
+root@student7-virtual-machine:~/다운로드# google-chrome
+[4634:4642:0516/105844.080960:ERROR:command_buffer_proxy_impl.cc(128)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+^Z
+[1]+  멈춤                  google-chrome
+root@student7-virtual-machine:~/다운로드# bg
+[1]+ google-chrome &
+root@student7-virtual-machine:~/다운로드# dpkg --info google-chrome-stable_current_amd64.deb 
+ new Debian package, version 2.0.
+ size 94953468 bytes: control archive=15696 bytes.
+    1097 바이트,    12 줄      control              
+   24731 바이트,   584 줄   *  postinst             #!/bin/sh
+   19913 바이트,   442 줄   *  postrm               #!/bin/sh
+    1349 바이트,    42 줄   *  prerm                #!/bin/sh
+ Package: google-chrome-stable
+ Version: 113.0.5672.92-1
+ Architecture: amd64
+ Maintainer: Chrome Linux Team <chromium-dev@chromium.org>
+ Installed-Size: 307137
+ Pre-Depends: dpkg (>= 1.14.0)
+ Depends: ca-certificates, fonts-liberation, libasound2 (>= 1.0.17), libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libatspi2.0-0 (>= 2.9.90), libc6 (>= 2.17), libcairo2 (>= 1.6.0), libcups2 (>= 1.6.0), libcurl3-gnutls | libcurl3-nss | libcurl4 | libcurl3, libdbus-1-3 (>= 1.9.14), libdrm2 (>= 2.4.75), libgbm1 (>= 17.1.0~rc2), libglib2.0-0 (>= 2.39.4), libgtk-3-0 (>= 3.9.10) | libgtk-4-1, libnspr4 (>= 2:4.9-2~), libnss3 (>= 2:3.31), libpango-1.0-0 (>= 1.14.0), libu2f-udev, libvulkan1, libx11-6 (>= 2:1.4.99.1), libxcb1 (>= 1.9.2), libxcomposite1 (>= 1:0.4.4-1), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxkbcommon0 (>= 0.5.0), libxrandr2, wget, xdg-utils (>= 1.0.2)
+ Provides: www-browser
+ Section: web
+ Priority: optional
+ Description: The web browser from Google
+  Google Chrome is a browser that combines a minimal design with sophisticated technology to make the web faster, safer, and easier.
+root@student7-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28.1_amd64.deb
+--2023-05-16 11:16:55--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28.1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 91.189.91.38, 185.125.190.39, 185.125.190.36, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|91.189.91.38|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 404 Not Found
+2023-05-16 11:16:56 오류 404: Not Found.
+
+root@student7-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+--2023-05-16 11:17:21--  http://archive.ubuntu.com/ubuntu/pool/universe/m/mc/mc_4.8.28-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 91.189.91.38, 185.125.190.39, 91.189.91.39, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|91.189.91.38|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 540062 (527K) [application/x-debian-package]
+저장 위치: ‘mc_4.8.28-1_amd64.deb’
+
+mc_4.8.28-1_amd64.de 100%[=====================>] 527.40K   436KB/s    / 1.2s     
+
+2023-05-16 11:17:23 (436 KB/s) - ‘mc_4.8.28-1_amd64.deb’ 저장함 [540062/540062]
+
+root@student7-virtual-machine:~/다운로드# ls
+google-chrome-stable_current_amd64.deb  mc_4.8.28-1_amd64.deb
+root@student7-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_
+--2023-05-16 11:18:08--  http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 91.189.91.39, 91.189.91.38, 185.125.190.36, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|91.189.91.39|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 404 Not Found
+2023-05-16 11:18:09 오류 404: Not Found.
+
+root@student7-virtual-machine:~/다운로드# wget http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+--2023-05-16 11:21:20--  http://archive.ubuntu.com/ubuntu/pool/universe/n/ncftp/ncftp_3.2.6-1_amd64.deb
+archive.ubuntu.com (archive.ubuntu.com) 해석 중... 185.125.190.39, 91.189.91.39, 91.189.91.38, ...
+다음으로 연결 중: archive.ubuntu.com (archive.ubuntu.com)|185.125.190.39|:80... 연결했습니다.
+HTTP 요청을 보냈습니다. 응답 기다리는 중... 200 OK
+길이: 338438 (331K) [application/x-debian-package]
+저장 위치: ‘ncftp_3.2.6-1_amd64.deb’
+
+ncftp_3.2.6-1_amd64. 100%[=====================>] 330.51K   271KB/s    / 1.2s     
+
+2023-05-16 11:21:22 (271 KB/s) - ‘ncftp_3.2.6-1_amd64.deb’ 저장함 [338438/338438]
+
+root@student7-virtual-machine:~/다운로드# dpkg -l ncftp
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-=================================
+un  ncftp          <none>       <none>       (설명 없음)
+root@student7-virtual-machine:~/다운로드# dpkg --info ncftp_3.2.6-1_amd64.deb 
+ new Debian package, version 2.0.
+ size 338438 bytes: control archive=1292 bytes.
+     588 바이트,    14 줄      control              
+    1194 바이트,    19 줄      md5sums              
+     201 바이트,    10 줄   *  postinst             #!/bin/sh
+     115 바이트,    13 줄   *  prerm                #!/bin/sh
+ Package: ncftp
+ Version: 2:3.2.6-1
+ Architecture: amd64
+ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+ Original-Maintainer: Noël Köthe <noel@debian.org>
+ Installed-Size: 1122
+ Depends: libc6 (>= 2.34), libncurses6 (>= 6), libtinfo6 (>= 6)
+ Section: net
+ Priority: optional
+ Homepage: https://www.ncftp.com/ncftp/
+ Description: User-friendly and well-featured FTP client
+  Ncftp allows a user to transfer files to and from a remote network
+  site, and offers additional features that are not found in the standard
+  interface, ftp. This version has Readline support enabled.
+root@student7-virtual-machine:~/다운로드# dpkg -i ncftp_3.2.6-1_amd64.deb
+Selecting previously unselected package ncftp.
+(데이터베이스 읽는중 ...현재 202286개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack ncftp_3.2.6-1_amd64.deb ...
+Unpacking ncftp (2:3.2.6-1) ...
+ncftp (2:3.2.6-1) 설정하는 중입니다 ...
+update-alternatives: using /usr/bin/ncftp3 to provide /usr/bin/ncftp (ncftp) in auto mode
+Processing triggers for man-db (2.10.2-1) ...
+root@student7-virtual-machine:~/다운로드# ncftp
+NcFTP 3.2.6 (Dec 04, 2016) by Mike Gleason (http://www.NcFTP.com/contact/).
+
+Copyright (c) 1992-2016 by Mike Gleason.
+All rights reserved.
+
+ncftp> ls
+ls: must be connected to do that.
+ncftp> open ftp.ubuntu.com
+Connecting to 185.125.190.39...                                                    
+FTP server (vsftpd)
+Logging in...                                                                      
+Login successful.
+Logged in to ftp.ubuntu.com.                                                       
+ncftp / > ls
+cdimage/                   maas-images/               ubuntu/
+cloud-images/              old-images/                ubuntu-cloud-archive/
+extras/                    releases/                  ubuntu-ports/
+lxc-images/                simple-streams/
+ncftp / > cd ubuntu
+Directory successfully changed.
+ncftp /ubuntu > cd ubuntu/pool/universe/n/ncftp
+Directory successfully changed.
+ncftp .../pool/universe/n/ncftp > ls
+ncftp_3.2.5-1.1.diff.gz                  ncftp_3.2.5-2.2.dsc
+ncftp_3.2.5-1.1.dsc                      ncftp_3.2.5-2.2_amd64.deb
+ncftp_3.2.5-1.1_amd64.deb                ncftp_3.2.5-2.debian.tar.xz
+ncftp_3.2.5-1.1_i386.deb                 ncftp_3.2.5-2.dsc
+ncftp_3.2.5-1.1build1.diff.gz            ncftp_3.2.5-2_amd64.deb
+ncftp_3.2.5-1.1build1.dsc                ncftp_3.2.5-2_i386.deb
+ncftp_3.2.5-1.1build1_amd64.deb          ncftp_3.2.5.orig.tar.gz
+ncftp_3.2.5-1.1build1_i386.deb           ncftp_3.2.6-1.debian.tar.xz
+ncftp_3.2.5-2.1.debian.tar.xz            ncftp_3.2.6-1.dsc
+ncftp_3.2.5-2.1.dsc                      ncftp_3.2.6-1_amd64.deb
+ncftp_3.2.5-2.1_amd64.deb                ncftp_3.2.6.orig.tar.gz
+ncftp_3.2.5-2.2.debian.tar.xz
+ncftp .../pool/universe/n/ncftp > exit
+root@student7-virtual-machine:~/다운로드# dpkg -r ncftp
+(데이터베이스 읽는중 ...현재 202306개의 파일과 디렉터리가 설치되어 있습니다.)
+ncftp (2:3.2.6-1)를 제거합니다...
+Processing triggers for man-db (2.10.2-1) ...
+root@student7-virtual-machine:~/다운로드# dpkg -i mc_4.8.28-1_amd64.deb 
+Selecting previously unselected package mc.
+(데이터베이스 읽는중 ...현재 202286개의 파일과 디렉터리가 설치되어 있습니다.)
+Preparing to unpack mc_4.8.28-1_amd64.deb ...
+Unpacking mc (3:4.8.28-1) ...
+dpkg: 종속성 문제로 mc의 구성이 차단되었습니다:
+ mc 패키지는 다음 패키지에 의존: libssh2-1 (>= 1.2.8): 하지만:
+  libssh2-1 패키지는 설치하지 않았습니다.
+ mc 패키지는 다음 패키지에 의존: mc-data (= 3:4.8.28-1): 하지만:
+  mc-data 패키지는 설치하지 않았습니다.
+
+dpkg: error processing package mc (--install):
+ 의존성 문제 - 설정하지 않고 남겨둠
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+처리하는데 오류가 발생했습니다:
+ mc
+root@student7-virtual-machine:~/다운로드# dpkg -l mc
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-=====================================>
+iU  mc             3:4.8.28-1   amd64        Midnight Commander - a powerful file >
+...skipping...
+희망상태=알수없음(U)/설치(I)/지우기(R)/깨끗이(P)/고정(H)
+| 상태=아님(N)/설치(I)/설정(C)/풀림(U)/절반설정(F)/일부설치(H)/트리거대기(W)/
+| /    트리거밀림(T)
+|/ 오류?=(없음)/다시설치필요(R) (상태, 오류가 대문자=불량)
+||/ 이름           버전         Architecture 설명
++++-==============-============-============-=====================================>
+iU  mc             3:4.8.28-1   amd64        Midnight Commander - a powerful file >
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-7/7 (END)
+[2]+  멈춤                  dpkg -l mc
+
+
+root@student7-virtual-machine:~/다운로드# dpkg -r  mc
+(데이터베이스 읽는중 ...현재 202388개의 파일과 디렉터리가 설치되어 있습니다.)
+mc (3:4.8.28-1)를 제거합니다...
+Processing triggers for mailcap (3.70+nmu1ubuntu1) ...
+Processing triggers for gnome-menus (3.36.0-1ubuntu3) ...
+Processing triggers for desktop-file-utils (0.26-1ubuntu3) ...
+root@student7-virtual-machine:~/다운로드#
