@@ -171,3 +171,11 @@ root@student7-virtual-machine:~/다운로드# google-chrome
 
 (google-chrome:3371): IBUS-WARNING **: 10:47:12.300: google-chrome has no capability of surrounding-text feature
 ^Croot@student7-virtual-machine:~/다운로드# ^C
+root@student7-virtual-machine:~/다운로드# jobs
+root@student7-virtual-machine:~/다운로드# google-chrome
+[4634:4642:0516/105844.080960:ERROR:command_buffer_proxy_impl.cc(128)] ContextResult::kTransientFailure: Failed to send GpuControl.CreateCommandBuffer.
+^Z
+[1]+  멈춤                  google-chrome
+root@student7-virtual-machine:~/다운로드# bg
+[1]+ google-chrome &
+root@student7-virtual-machine:~/다운로드# 
